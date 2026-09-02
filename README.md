@@ -1,1 +1,1 @@
-https://artem-beep.github.io/zakrivayuschiy-teg-f/
+https://artem-beep.github.io/zakrivayuschiy-teg-f
