@@ -1,1 +1,53 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* Шрифты */
+  --main-font: 'Inter';
+  --accent-font: 'PressStart2P';
+  --main-font-weight: 400;
+  --title-font-weight: 700;
+
+  /* Цвета */
+  --bg-color: #fff;
+  --accent-color: #000;
+  --stroke-color: #fff;
+  --button-text-color: #fff;
+  --contour-color: #000;
+  --animation-fill-color: #f00;
+  --backdrop-color: rgb(0 0 0 / 0.75);
+
+  /* Цвета фонового градиента */
+  --gradient-line-color: #d3d3d3;
+  --gradient-start-color: #e7e7e7;
+  --gradient-end-color: #1a1a1a;
+
+  /* Фоновый градиент страницы: сетка из полос + затемнение сверху вниз */
+  --page-gradient:
+    repeating-linear-gradient(
+      to right,
+      var(--gradient-line-color) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--gradient-line-color) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--gradient-start-color) 0.01%,
+      var(--gradient-end-color)
+    );
+
+  /* Размеры */
+  --content-width: clamp(320px, 100%, 700px);
+  --border-width: 2px;
+  --logo-font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --header-title-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --header-padding-block: clamp(120px, 7.28rem + 0.939vw, 130px);
+  --floppy-icon-size: 21px;
+}
+
+@media (width <= 375px) {
+  :root {
+    --floppy-icon-size: 28px;
+  }
+}
